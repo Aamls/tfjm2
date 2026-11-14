@@ -18,6 +18,7 @@
 *.toc
 *.vrb
 *.xdv
+*.pdf
 
 # Bibliography
 *.run.xml
