@@ -1,0 +1,54 @@
+    \begin{tikzpicture}[
+        vertex/.style={
+            circle,
+            draw,
+            minimum size=8mm,
+            inner sep=0pt
+        },
+        arrowr/.style={
+            -{Stealth},
+            thick,
+            bend right=20
+        },
+        arrowl/.style={
+            -{Stealth},
+            thick,
+            bend left=20
+        }
+        ]
+            
+            \foreach \i in {1,...,6} {
+                \node[vertex] (\i) at ({90-60*(\i-1)}:2cm) {\i};
+            }
+            
+        \draw[arrowl] (1) to (2);
+        \draw[arrowl] (1) to (3);
+        \draw[arrowl] (1) to (4);
+        \draw[arrowr] (1) to (5);
+        \draw[arrowr] (1) to (6);
+        \draw[arrowr] (2) to (1);
+        \draw[arrowl] (2) to (3);
+        \draw[arrowl] (2) to (4);
+        \draw[arrowl] (2) to (5);
+        \draw[arrowr] (2) to (6);
+        \draw[arrowr] (3) to (2);
+        \draw[arrowl] (3) to (4);
+        \draw[arrowl] (3) to (5);
+        \draw[arrowl] (3) to (6);
+        \draw[arrowr] (3) to (1);
+        \draw[arrowr] (4) to (3);
+        \draw[arrowl] (4) to (5);
+        \draw[arrowl] (4) to (6);
+        \draw[arrowl] (4) to (1);
+        \draw[arrowr] (4) to (2);
+        \draw[arrowr] (5) to (4);
+        \draw[arrowr] (5) to (3);
+        \draw[arrowl] (5) to (2);
+        \draw[arrowl] (5) to (6);
+        \draw[arrowl] (5) to (1);
+        \draw[arrowl] (6) to (1);
+        \draw[arrowl] (6) to (2);
+        \draw[arrowl] (6) to (3);
+        \draw[arrowr] (6) to (4);
+        \draw[arrowr] (6) to (5);
+\end{tikzpicture}
