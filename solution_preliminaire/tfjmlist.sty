@@ -1,0 +1,53 @@
+\NeedsTeXFormat{LaTeX2e}
+\ProvidesPackage{tfjmlist}[2026/11/12 flush-left nested enumerate with no left margin]
+ 
+\RequirePackage{enumitem}
+ 
+% A dedicated list type, left untouched from plain enumerate, so this
+% styling is opt-in via \begin{tfjmenum}...\end{tfjmenum}.
+\newlist{tfjmenum}{enumerate}{2}
+ 
+% Widest label expected at each level, used only to size the
+% paragraph-continuation indent (listparindent below) -- the list
+% itself has no left margin, see leftmargin=0pt.
+\newlength{\lvlonewidth}
+\settowidth{\lvlonewidth}{9.}        % e.g. "9." -- adjust if you expect >9 items
+ 
+\newlength{\lvltwowidth}
+\settowidth{\lvltwowidth}{9. z)}     % e.g. "9. z)" -- adjust if you expect >9/>26 sub-items
+ 
+% Make "\item[]" at the top level also advance the counter (plain \item
+% already does this on its own; \item[<label>] normally does not). This
+% lets a label-less parent item -- one whose only content is a nested
+% enumerate -- be written as "\item[]" and still count correctly, so the
+% nested list's own label carries the number, e.g. "3. a)" with no empty
+% "3." line above it.
+\makeatletter
+\def\@itemnolabelstep[#1]{\stepcounter{tfjmenumi}{\itemindent=0pt \origitemI[#1]}}
+ 
+\setlist[tfjmenum,1]{
+  label=\arabic*.,
+  leftmargin=0pt,
+  itemindent=\dimexpr\lvlonewidth+0.5em\relax,
+  labelwidth=\lvlonewidth,
+  labelsep=0.5em,
+  align=left,
+  listparindent=\dimexpr\lvlonewidth+0.5em\relax,
+  before={%
+    \let\origitemI\item
+    \def\item{\@ifnextchar[{\@itemnolabelstep}{\origitemI}}%
+  },
+}
+\makeatother
+ 
+\setlist[tfjmenum,2]{
+  label=\arabic{tfjmenumi}.~\alph*),
+  leftmargin=0pt,
+  itemindent=\dimexpr\lvltwowidth+0.5em\relax,
+  labelwidth=\lvltwowidth,
+  labelsep=0.5em,
+  align=left,
+  listparindent=\dimexpr\lvltwowidth+0.5em\relax,
+}
+ 
+\endinput

@@ -11,25 +11,7 @@
 \usepackage{enumitem}
 \usepackage{amssymb}
 \usepackage{amsmath}
-
-
-\newlist{questions}{enumerate}{2}
-\setlist[questions,1]{
-    label=\arabic*.,
-    align=left,
-    leftmargin=0pt,
-    listparindent=\parindent,
-    labelwidth=0pt,
-    itemindent=!
-}
-\setlist[questions,2]{
-    label=\arabic{questionsi}.\ \alph*),
-    align=left,
-    leftmargin=0pt,
-    listparindent=\parindent,
-    labelwidth=0pt,
-    itemindent=!
-}
+\usepackage{tfjmlist}
 
 \title{tfjm$^{2}$ 2027}
 \author{Equipe Lycée Rocroy Saint-Vincent de Paul}
@@ -41,7 +23,7 @@
 
 \section{\sc{Chaises musicales au restaurant}}
 
-\begin{questions}
+\begin{tfjmenum}
 
 \begin{figure}[ht]
 \centering
@@ -50,8 +32,8 @@
 \label{fig1.a}
 \end{figure}
 
-    \stepcounter{questionsi}\item[]
-    \begin{questions}
+    \item[]
+    \begin{tfjmenum}
     \item
     Le plan de table est invariant par rotation. Lorsque le plat $1<i\leq 10$ est servi, deux convives sont assis à deux places reliées si et seulement si ils étaient assis à deux places reliées au plat précédent.
 
@@ -69,10 +51,10 @@
     \label{fig1.b}
     \end{figure}
     
-    \end{questions}
+    \end{tfjmenum}
     
 
-\end{questions}
+\end{tfjmenum}
 
 \section{\sc{Dés personnalisés}}
 
@@ -106,18 +88,19 @@ soit encore
     &= \frac{5}{6}\times\frac{1}{2} + \frac{1}{6}\times\frac{1}{4} + 0 + 0 + \frac{1}{2}\times\frac{1}{6}\times\frac{1}{4} + 0\\
     &= \frac{23}{48}
 \end{align*}
-\begin{questions}
-    \stepcounter{questionsi}\item[]
-    \begin{questions}
+\begin{tfjmenum}
+    
+    \item[]
+    \begin{tfjmenum}
     
     \item
     Le pire score pour Théo est...
 
     \item Le meilleur score pour Théo est...
 
-    \end{questions}
+    \end{tfjmenum}
 
-\end{questions}
+\end{tfjmenum}
 
 \section{\sc{La couturière de vérité}}
 
