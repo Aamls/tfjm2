@@ -1,0 +1,48 @@
+
+# LaTeX compilation artifacts
+*.aux
+*.bbl
+*.bcf
+*.blg
+*.fdb_latexmk
+*.fls
+*.fmt
+*.fot
+*.lof
+*.log
+*.lot
+*.nav
+*.out
+*.snm
+*.synctex.gz
+*.toc
+*.vrb
+*.xdv
+
+# Bibliography
+*.run.xml
+
+# Index and glossary
+*.acn
+*.acr
+*.alg
+*.glg
+*.glo
+*.gls
+*.ist
+*.nlo
+*.nls
+
+# Beamer / presentations
+*.upa
+*.upb
+
+# LaTeX editors
+*.bak
+*.swp
+*.tmp
+*~
+
+# Build directories
+_build/
+build/
