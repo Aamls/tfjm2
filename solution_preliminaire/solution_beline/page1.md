@@ -32,3 +32,25 @@ Par contraposée, on peut conclure que si Inès est visible, alors $k \in \mathb
     Or, par définition, $F(x,y)$ est le premier point de la droite $d$ appartenant à $\mathbb{N}^2 \setminus \{(0,0)\}$ (il possède les plus petites coordonnées entières strictement positives).
     Il ne peut donc exister aucun point à coordonnées entières strictement positives sur $[OI]$, et par conséquent aucun arbre entre $O$ et $I$.
     Donc Inès est visible.
+* **$0 < n < 1$**
+
+donc $0 < n = \frac{a}{x} = \frac{b}{y} < 1$ donc $a < x$ et $b < y$
+
+or $I(a ; b) \in d$ et $F(x ; y) \in d$ donc $F$ est "après" $I$
+
+donc il n'y a pas d'arbre sur $[OI]$ car $F$ est le premier arbre sur $d$.
+
+Donc Ines est visible
+
+### Conclusion :
+
+Si $k \in \mathbb{R} \setminus \mathbb{Q}^+$ ou $k \in \mathbb{Q}^+$ et $n = \frac{a}{x} = \frac{b}{y} < 1$ ($n \neq 0$)
+
+alors Ines est visible
+
+On a montré l'implication et la réciproque donc on a une condition nécessaire et suffisante
+
+Donc Ines est visible si et seulement si $k \in \mathbb{Q}^+$ et $n = \frac{a}{x} = \frac{b}{y} < 1$ ($n \neq 0$)
+
+ou $k \in \mathbb{R} \setminus \mat
+hbb{Q}^+$
