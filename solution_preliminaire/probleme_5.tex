@@ -1,0 +1,85 @@
+\begin{tfjmenum}
+
+Pour cette réponse,
+Soit une droite d d'équation $y = kx$ passant par $O(0,0)\in d$,
+Un point $F(x',y')\in A$ tel que $x'$ et $y'$ sont premiers entre eux, i.e. F est le premier point de d de coordonnées entières naturelles non nulles. Donc F est le premier arbre sur d.
+Et $I(a,b)\in d$ tel que $(a,b)\in\mathbb{R}^2 \setminus A$.
+
+\item
+
+CONDITION NECESSAIRE
+
+Si $F(x',y')\in d$ et $I(a,b)\in d$ tel que $F\in [OI]$ alors Ines est cachée, d'après l'énoncé.
+
+$F(x',y')\in d$ et $I(a,b)\in d$ tel que $F\in [OI]$
+
+$\Leftrightarrow$ $k\in \mathbb{Q}^+$ car $F(x',y')\in A$ et $\vec{OF}$ et $\vec{OI}$ sont colinéaires car $F\in [OI]\subset d$
+
+$\Leftrightarrow$ $k\in \mathbb{Q}^+$ et $\vec{OI}=n\vec{OF}$ avec $n>1$
+
+$\Leftrightarrow$ $k\in \mathbb{Q}^+$ et $\vec{OI}=\begin{pmatrix} a \\ b \end{pmatrix} = n\vec{OF}=\begin{pmatrix} x' \\ y' \end{pmatrix}$ où $n>1$ car $O(0,0)$.
+
+$\Leftrightarrow$ $k\in \mathbb{Q}^+$ et $n=\frac{a}{x'}=\frac{b}{y'}>1$
+
+On a donc :
+Si $k\in \mathbb{Q}^+$ et $n=\frac{a}{x'}=\frac{b}{y'}>1$ $(n\neq 0)$ alors Ines est cachée.
+
+Ainsi par contraposée on peut donc conclure :
+
+Si Ines est visible alors $k\in \mathbb{R}\setminus \mathbb{Q}^+$ ou $k\in \mathbb{Q}^+$ et $n=\frac{a}{x'}=\frac{b}{y'}<1$ $(n\neq 0)$
+
+\item
+
+CONDITION SUFFISANTE
+
+\begin{itemize}
+    \item Si $k\in \mathbb{R} \setminus \mathbb{Q}^+$ alors il n'existe pas de point $E\in A$ tel que $E\in d$.
+
+    Donc il n'existe pas de point $F(x',y')\in d$ tel que $F(x',y')\in A$.
+
+    Or $I(a,b)\in d$.
+
+    Donc il n'existe pas d'arbre sur le segment $[OI]$.
+
+    Donc Ines est visible.
+
+    \item $k\in \mathbb{Q}^+$ et $n=\frac{a}{x'}=\frac{b}{y'}<1$ $(n\neq 0)$ $\Leftrightarrow$ $k\in \mathbb{Q}^+$ et $\vec{OI}=\begin{pmatrix} a \\ b \end{pmatrix} = n\vec{OF}=\begin{pmatrix} x' \\ y' \end{pmatrix}$ $(n\neq 0)$.
+
+    \begin{itemize}
+        \item Si $n<0$ :
+
+        Donc $n=\frac{a}{x'}=\frac{b}{y'}<0$ or $(x',y')\in A$ donc $a<0$ et $b<0$.
+
+        Donc $(a,b)\in \mathbb{R}^{-2}$ or il n'y a pas d'arbre car $A=\mathbb{N}^2 \setminus \{(0,0)\}$.
+
+        Donc Ines est visible.
+
+        \item Si $0<n<1$ :
+
+        Donc $0<n=\frac{a}{x'}=\frac{b}{y'}<1$ donc $a<x'$ et $b<y'$.
+
+        Or $I(a,b)\in d$ et $F(x',y')\in d$.
+
+        Donc $F\notin[OI]$.
+
+        Donc il n'y a pas d'arbre sur $[OI]$, F étant le premier arbre sur d.
+
+        Donc Ines est visible.
+    \end{itemize}
+\end{itemize}
+
+Conclusion :
+
+Si $k\in \mathbb{R} \setminus \mathbb{Q}^+$ ou $k\in \mathbb{Q}^+$ et $n=\frac{a}{x'}=\frac{b}{y'}<1$ $(n\neq 0)$
+
+alors Ines est visible.
+
+\item
+
+CONDITION NÉCESSAIRE ET SUFFISANTE
+
+On a montré l'implication et la réciproque donc on a :
+
+Ines est visible si et seulement si $k\in \mathbb{Q}^+$ et $n=\frac{a}{x'}=\frac{b}{y'}<1$ $(n\neq 0)$ ou $k\in \mathbb{R} \setminus \mathbb{Q}^+$
+
+\end{tfjmenum}
